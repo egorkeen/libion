@@ -1,0 +1,17 @@
+@import "/src/styles/colors.scss";
+@import "/src/styles/reset.scss";
+@import "/src/styles/fonts/Rubik/index.scss";
+
+body {
+  background-color: $black01;
+  font-family: "Rubik", "Arial", "Helvetica", "Verdana", "Trebuchet MS",
+    "Tahoma", sans-serif;
+  color: white;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 1296px;
+  margin: 20px auto 60px;
+}

@@ -1,0 +1,18 @@
+@mixin gradient01 {
+  background: linear-gradient(90deg, #ffa800 0%, #d23938 100%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
