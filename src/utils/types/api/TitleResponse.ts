@@ -92,7 +92,7 @@ export interface Player {
   alternative_player: string | null;
   host: string;
   episodes: Episodes;
-  list: Record<string, Episode>;
+  list: Record<number, Episode>;
   rutube: Record<string, any>;
 }
 

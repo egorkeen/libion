@@ -1,0 +1,49 @@
+@import "/src/styles";
+
+.searchBar {
+  max-width: 1062px;
+  margin: 150px auto 80px;
+  display: flex;
+  justify-content: space-between;
+
+  .inputWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+    background-color: $gray01;
+    padding: 20px 30px;
+    border-radius: 22px;
+
+    input {
+      font-size: 20px;
+      line-height: 22px;
+      width: 94%;
+    }
+
+    .searchButton {
+      width: 34px;
+      height: 34px;
+      @include buttonOpacity;
+    }
+  }
+
+  .filtersButton {
+    background-color: $gray01;
+    border-radius: 22px;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      @include buttonOpacity;
+
+      svg {
+        width: 37px;
+        height: 37px;
+      }
+    }
+  }
+}

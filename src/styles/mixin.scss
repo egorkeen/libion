@@ -16,3 +16,15 @@
     background-position: 0% 50%;
   }
 }
+
+@mixin buttonOpacity {
+  transition: .1s linear;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  &:active {
+    opacity: .7;
+  }
+}
