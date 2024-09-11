@@ -9,7 +9,7 @@ import {
 import {
   TitleParams,
   SearchParams,
-  TitleResponse,
+  Title,
   ListOfTitlesParams,
   FeedResponse,
   FeedParams,
@@ -22,13 +22,13 @@ export const anilibriaApi = createApi({
     baseUrl: import.meta.env.VITE_ANILIBRIA_API_URL,
   }),
   endpoints: (builder) => ({
-    getTitle: builder.query<TitleResponse, TitleParams>({
+    getTitle: builder.query<Title, TitleParams>({
       query: (params) => transformParamsToTitleUrl(params),
     }),
-    getRandomTitle: builder.query<TitleResponse, void>({
+    getRandomTitle: builder.query<Title, void>({
       query: () => "title/random",
     }),
-    getListOfTitles: builder.query<TitleResponse[], ListOfTitlesParams>({
+    getListOfTitles: builder.query<Title[], ListOfTitlesParams>({
       query: (params) => transformParamsToListOfTitlesUrl(params),
     }),
     searchTitles: builder.query<SearchResponse, SearchParams>({
@@ -53,5 +53,6 @@ export const {
   useGetFeedQuery,
   useGetGenresQuery,
   useGetYearsQuery,
+  useSearchTitlesQuery,
   useLazySearchTitlesQuery,
 } = anilibriaApi;

@@ -1,0 +1,48 @@
+@import "/src/styles";
+
+.wrapper {
+  position: relative;
+
+  .name {
+    max-width: 269px;
+    font-size: 24px;
+    line-height: 28px;
+    color: $white01;
+    z-index: 60;
+    position: absolute;
+    top: 343px;
+    left: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.card {
+  position: relative;
+  width: 306px;
+  height: 436px;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: border 0.15s linear;
+  border: 0 solid transparent;
+
+  &:hover {
+    border-color: $pink01;
+    border: 5px solid $pink01;
+  }
+
+  .poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .mask {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 0 0 30px 30px;
+  }
+}

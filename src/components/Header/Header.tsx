@@ -3,6 +3,7 @@ import styles from "./Header.module.scss";
 import logo from "@assets/logo.svg";
 import random from "@assets/random.svg";
 import favorites from "@assets/favorites.svg";
+import { Button } from "../Button";
 
 export const Header = () => {
   return (
@@ -21,7 +22,7 @@ export const Header = () => {
         </NavLink>
 
         <NavLink to="/">
-          <button className={styles.authButton}>Войти</button>
+          <Button>Войти</Button>
         </NavLink>
       </div>
     </header>

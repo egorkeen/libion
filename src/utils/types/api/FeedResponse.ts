@@ -1,5 +1,5 @@
 import { Properties } from "@utils/constants";
-import { TitleResponse } from "./TitleResponse";
+import { Title } from "./TitleResponse";
 import { YoutubeResponse } from "./YoutubeResponse";
 
 export interface YoutubeItem {
@@ -20,4 +20,4 @@ export type FeedTitleProperties =
   | Properties.id
   | Properties.player;
 
-export type FeedTitle = Pick<TitleResponse, FeedTitleProperties>;
+export type FeedTitle = Pick<Title, FeedTitleProperties>;

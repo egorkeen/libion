@@ -1,5 +1,5 @@
 import { Header } from "@components";
-import { SearchBar } from "./components";
+import { Categories, SearchBar } from "./components";
 import styles from "./Main.module.scss";
 
 export const Main = () => {
@@ -8,6 +8,7 @@ export const Main = () => {
       <Header />
       {/* TODO: реализовать карусель */}
       <SearchBar />
+      <Categories />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { Genre } from "@utils/constants";
 
-export interface TitleResponse {
+export interface Title {
   id: number;
   code: string;
   names: Names;
