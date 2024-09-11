@@ -11,15 +11,15 @@
     position: absolute;
     top: 197px;
     left: -22px;
-    @include buttonOpacity;
     z-index: 100;
+    @include buttonOpacity;
   }
 
   .nextButton {
     position: absolute;
     top: 197px;
     right: -22px;
-    @include buttonOpacity;
     z-index: 100;
+    @include buttonOpacity;
   }
 }

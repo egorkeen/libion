@@ -1,4 +1,4 @@
-import { Header } from "@components";
+import { Footer, Header } from "@components";
 import { Categories, SearchBar } from "./components";
 import styles from "./Main.module.scss";
 
@@ -9,6 +9,7 @@ export const Main = () => {
       {/* TODO: реализовать карусель */}
       <SearchBar />
       <Categories />
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,48 @@
+@import "/src/styles";
+
+.footer {
+  background-color: $gray01;
+  padding: 80px 168px;
+  margin: 150px auto 60px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+
+  .logo {
+    width: 115px;
+    height: 58px;
+  }
+
+  .columns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .leftColumn {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 460px;
+    }
+    .rightColumn {
+      width: 260px;
+    }
+  }
+}
+
+.text {
+  color: $white01;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.bold {
+font-weight: 700;
+}
+
+.thin {
+  font-weight: 400;
+}

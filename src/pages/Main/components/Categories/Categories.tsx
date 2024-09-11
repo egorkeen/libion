@@ -18,7 +18,7 @@ export const Categories = () => {
         <GenreList key={genre} genre={genre} />
       ))}
       {genres && listsToRender < genres.length && (
-        <Button onClick={() => setListsToRender(listsToRender + 2)}>еще</Button>
+        <Button onClick={() => setListsToRender(listsToRender + 2)}>Ещё</Button>
       )}
     </div>
   );
