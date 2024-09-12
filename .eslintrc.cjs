@@ -9,16 +9,14 @@ module.exports = {
     "plugin:prettier/recommended",
     "prettier",
   ],
-  plugins: ["react", "@typescript-eslint", "prettier"],
+  plugins: ["react", "@typescript-eslint", "prettier", "react-hooks"],
   settings: {
     react: {
       version: "detect",
     },
     "import/resolver": {
       typescript: {},
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-      },
+      node: {},
     },
   },
   env: {
@@ -27,7 +25,7 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off", // Not needed with React 17+
+    "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       1,
       { extensions: [".js", ".jsx", ".ts", ".tsx"] },
@@ -66,6 +64,8 @@ module.exports = {
         unnamedComponents: "arrow-function",
       },
     ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
   overrides: [
     {
@@ -75,4 +75,5 @@ module.exports = {
       },
     },
   ],
+  ignores: ["node_modules/**", "dist/**"],
 };
