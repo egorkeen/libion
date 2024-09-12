@@ -104,10 +104,10 @@ export interface Episodes {
 
 export interface Episode {
   episode: number;
-  name: string | null;
+  name: string;
   uuid: string;
   created_timestamp: number;
-  preview: string | null;
+  preview: string;
   skips: Skips;
   hls: HLS;
 }
