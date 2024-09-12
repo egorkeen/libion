@@ -1,0 +1,14 @@
+@import "/src/styles";
+
+.button {
+  padding: 15px 22px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  transition: 0.1s linear;
+}
+
+.active {
+  border: 3px solid $pink01;
+  border-radius: 20px;
+}

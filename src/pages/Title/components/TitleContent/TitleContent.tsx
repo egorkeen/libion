@@ -5,6 +5,7 @@ import { getPosterUrl } from "@utils/helpers";
 import likeIcon from "@assets/favorites.svg";
 import likeIconActive from "@assets/likeIconActive.svg";
 import { Tag } from "@components";
+import { Tabs } from "../Tabs";
 
 type TitleContentProps = {
   title: Title;
@@ -43,6 +44,8 @@ export const TitleContent: FC<TitleContentProps> = (props) => {
           </div>
         </div>
       </div>
+
+      <Tabs />
     </div>
   );
 };
