@@ -22,7 +22,7 @@ const createTabContent: CreateTabContent = ({ currentTab, series }) => {
 
 const tabs = [
   { label: "Серии", value: 1 },
-  { label: "Актеры", value: 2 },
+  { label: "Актеры озвучки", value: 2 },
 ];
 
 type TabsProps = {

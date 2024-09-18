@@ -36,7 +36,7 @@ export const TitleContent: FC<TitleContentProps> = (props) => {
           <p className={styles.description}>{description}</p>
           <div className={styles.aboutFooter}>
             <div className={styles.tags}>
-              {[...genres].map((genre) => (
+              {genres.map((genre) => (
                 <Tag key={genre} genre={genre} />
               ))}
             </div>

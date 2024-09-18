@@ -12,7 +12,11 @@ export const Series: FC<SeriesProps> = ({ series }) => {
   return (
     <div className={styles.series}>
       {Object.entries(series).map(([order, seriesItem]) => (
-        <SeriesItem order={order} preview={getPosterUrl(seriesItem.preview)} />
+        <SeriesItem
+          key={order}
+          order={order}
+          preview={getPosterUrl(seriesItem.preview)}
+        />
       ))}
     </div>
   );
