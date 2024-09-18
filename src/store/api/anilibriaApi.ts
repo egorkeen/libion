@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { Genre } from "@utils/constants";
+import { toArray } from "@utils/helpers";
 import {
   transformParamsToTitleUrl,
   transformParamsToListOfTitlesUrl,
@@ -30,6 +31,7 @@ export const anilibriaApi = createApi({
     }),
     getListOfTitles: builder.query<Title[], ListOfTitlesParams>({
       query: (params) => transformParamsToListOfTitlesUrl(params),
+      transformResponse: toArray,
     }),
     searchTitles: builder.query<SearchResponse, SearchParams>({
       query: (params) => transformParamsToSearchTitleUrl(params),

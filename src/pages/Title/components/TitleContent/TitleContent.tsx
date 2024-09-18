@@ -14,7 +14,7 @@ type TitleContentProps = {
 export const TitleContent: FC<TitleContentProps> = (props) => {
   const [isLiked, setLiked] = useState(false);
   const { title } = props;
-  const { names, description, season, genres, posters, player } = title;
+  const { names, description, season, genres, posters, player, franchises } = title;
 
   return (
     <div className={styles.content}>
@@ -45,7 +45,7 @@ export const TitleContent: FC<TitleContentProps> = (props) => {
         </div>
       </div>
 
-      <Tabs series={player.list} />
+      <Tabs franchises={franchises} series={player.list} />
     </div>
   );
 };

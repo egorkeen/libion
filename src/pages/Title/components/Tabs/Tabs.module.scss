@@ -10,4 +10,11 @@
     display: flex;
     gap: 40px;
   }
+
+  .tabContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 }

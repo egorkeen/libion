@@ -4,9 +4,10 @@ import styles from "./CarouselRenderer.module.scss";
 import prev from "@assets/prevButton.svg";
 import next from "@assets/nextButton.svg";
 import { TitleCard } from "../TitleCard";
+import { useGetListOfTitlesQuery } from "@store/api";
 
 type CarouselRendererProps = {
-  titles: Title[];
+  titlesIds: Title["id"][];
   hasPrev: boolean;
   onPrev: () => void;
   hasNext: boolean;
@@ -14,7 +15,12 @@ type CarouselRendererProps = {
 };
 
 export const CarouselRenderer: FC<CarouselRendererProps> = (props) => {
-  const { titles, hasNext, hasPrev, onNext, onPrev } = props;
+  const { titlesIds, hasNext, hasPrev, onNext, onPrev } = props;
+  const { data: titles } = useGetListOfTitlesQuery({
+    titlesList: titlesIds,
+    type: "id",
+  });
+
   return (
     <div className={styles.carouselRenderer}>
       {hasPrev && (
@@ -23,14 +29,15 @@ export const CarouselRenderer: FC<CarouselRendererProps> = (props) => {
         </button>
       )}
 
-      {titles.map((title) => (
-        <TitleCard
-          key={title.id}
-          id={title.id}
-          name={title.names.ru}
-          poster={title.posters.original.url}
-        />
-      ))}
+      {titles &&
+        titles.map((title) => (
+          <TitleCard
+            key={title.id}
+            id={title.id}
+            name={title.names.ru}
+            poster={title.posters.original.url}
+          />
+        ))}
 
       {hasNext && (
         <button className={styles.nextButton} onClick={onNext}>

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import styles from "./GenreList.module.scss";
 import { CarouselRenderer } from "@components";
 import { useSearchTitlesQuery } from "@store/api";
@@ -39,7 +39,16 @@ export const GenreList: FC<GenreListProps> = ({ genre }) => {
     }
   }, [data, totalPages]);
 
-  if (!data) {
+  const titlesIds = useMemo(() => {
+    const list = data?.list;
+
+    if (!list) {
+      return [];
+    }
+    return list.map((title) => title.id);
+  }, [data]);
+
+  if (!data || titlesIds.length === 0) {
     return null;
   }
 
@@ -51,7 +60,7 @@ export const GenreList: FC<GenreListProps> = ({ genre }) => {
       </Link>
 
       <CarouselRenderer
-        titles={data.list.slice(0, defaultListSize)}
+        titlesIds={titlesIds.slice(0, defaultListSize)}
         hasNext={currentPage < totalPages}
         hasPrev={currentPage !== 1}
         onNext={() => setCurrentPage(currentPage + 1)}

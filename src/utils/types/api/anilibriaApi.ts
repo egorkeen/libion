@@ -9,7 +9,7 @@ export interface TitleParams {
 
 export interface ListOfTitlesParams {
   type: "code" | "id";
-  titlesList: string[];
+  titlesList: number[];
   filter?: Properties[];
   remove?: Properties[];
 }
