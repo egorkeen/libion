@@ -93,3 +93,5 @@ export const colorByGenre: Record<Genre, [string, string]> = {
   [Genre.Action]: TagColors.Red,
   [Genre.Ecchi]: TagColors.Magenta,
 };
+
+export const defaultColors = TagColors.Blue;
