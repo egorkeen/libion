@@ -24,7 +24,7 @@ const createTabContent: CreateTabContent = ({
       return <Franchises franchises={franchises} />;
 
     case 3:
-      return <div>2</div>;
+      return <div></div>;
     default:
       return null;
   }

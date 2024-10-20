@@ -1,4 +1,4 @@
-import { CarouselRenderer } from "@components";
+import { CarouselRenderer, MessageDisplay } from "@components";
 import styles from "./Franchises.module.scss";
 import { FC, useMemo, useState } from "react";
 import { Franchise, FranchiseDetails } from "@utils/types";
@@ -50,6 +50,9 @@ const CollapseFranchise: FC<{
 };
 
 export const Franchises: FC<{ franchises: Franchise[] }> = ({ franchises }) => {
+  if (!franchises?.length) {
+    return <MessageDisplay>Франшизы не найдены</MessageDisplay>;
+  }
   return (
     <div className={styles.franchises}>
       {franchises.map((franchiseItem, index) => {

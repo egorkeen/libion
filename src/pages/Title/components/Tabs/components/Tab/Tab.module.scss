@@ -6,9 +6,9 @@
   line-height: 40px;
   font-weight: 700;
   transition: 0.1s linear;
+  border-radius: 20px;
 }
 
 .active {
   border: 3px solid $pink01;
-  border-radius: 20px;
 }

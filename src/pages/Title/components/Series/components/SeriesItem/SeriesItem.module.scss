@@ -14,6 +14,12 @@
     height: 234px;
     border-radius: 30px;
     border: 5px solid $white01;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 
   .order {
