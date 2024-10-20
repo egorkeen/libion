@@ -14,7 +14,8 @@ type TitleContentProps = {
 export const TitleContent: FC<TitleContentProps> = (props) => {
   const [isLiked, setLiked] = useState(false);
   const { title } = props;
-  const { names, description, season, genres, posters, player, franchises } = title;
+  const { names, description, season, genres, posters, player, franchises } =
+    title;
 
   return (
     <div className={styles.content}>
@@ -36,9 +37,8 @@ export const TitleContent: FC<TitleContentProps> = (props) => {
           <p className={styles.description}>{description}</p>
           <div className={styles.aboutFooter}>
             <div className={styles.tags}>
-              {genres.map((genre) => (
-                <Tag key={genre} genre={genre} />
-              ))}
+              {genres &&
+                genres.map((genre) => <Tag key={genre} genre={genre} />)}
             </div>
             <span className={styles.year}>{season.year} г.</span>
           </div>
